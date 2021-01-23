@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css">
+        
+        <title>P5</title>
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar" id="myNavbar">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                    href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="https://lojaoshop.com/" class="w3-bar-item w3-button">HOME</a>
+                <!--<a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> SOBRE</a>-->
+                <a href="#documentation" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> DOCUMENTATION</a>
+                <a href="#examples" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SAMPLES</a>
+                <a href="https://github.com/douglasdl/P5" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SOURCES</a>
+                <a href="https://github.com/douglasdl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                <!--<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SOBRE</a>-->
+                <a href="#documentation" class="w3-bar-item w3-button" onclick="toggleFunction()">DOCUMENTATION</a>
+                <a href="#examples" class="w3-bar-item w3-button" onclick="toggleFunction()">SAMPLES</a>
+                <a href="https://github.com/douglasdl/P5" class="w3-bar-item w3-button" onclick="toggleFunction()">SOURCES</a>
+                <a href="https://github.com/douglasdl" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+                <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+            </div>
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="documentation">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity">
+                    <img src="images/logo.png" class="logo">
+                </span>
+            </div>
+        </div>
+
+        <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">1+</span><br>
+                Basic
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">1+</span><br>
+                Machine Learning
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">1+</span><br>
+                Games
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">1+</span><br>
+                Other
+            </div>
+        </div>
+
+        <!-- Second Parallax Image with Portfolio Text -->
+        <div class="bgimg-p5 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">DOCUMENTATION</span>
+            </div>
+        </div>
+
+        <ul>
+            <li><a href="https://devdocs.io/html/" target="_blank">HTML</a></li>
+            <li><a href="https://devdocs.io/css/" target="_blank">CSS</a></li>
+            <li><a href="https://devdocs.io/javascript/" target="_blank">JavaScript</a></li>
+        </ul>
+
+        <!-- Second Parallax Image with Examples Text -->
+        <div class="bgimg-mli34 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">EXAMPLES</span>
+            </div>
+        </div>
+
+        <!-- Container (Samples Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="examples">
+            <h3 class="w3-center">EXAMPLES</h3>
+            <p class="w3-center"><em>Check online how each sample works.</em></p><br>
+
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div class="w3-row-padding w3-center">
+                <div class="w3-col m3 w3-tooltip">
+                    <img src="images/part1.png" style="width:100%" class="w3-hover-opacity w3-border w3-round-large w3-card products-images" alt="Flappy Bird">
+                    <p class="w3-text"><a target="_blank" href='https://douglasdl.github.io/Maratona-Discover/Part%201/'>Check this sample...</a></p>
+                </div>
+
+                <div class="w3-col m3 w3-tooltip">
+                    <img src="images/part2.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity w3-border w3-round-large w3-card products-images "alt="Load Sound">
+                    <p class="w3-text"><a target="_blank" href='https://douglasdl.github.io/Maratona-Discover/Part%202/'>Check this sample...</a></p>
+                </div>
+
+                <!--
+                <div class="w3-col m3 w3-tooltip">
+                    <img src="images/part3.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity w3-border w3-round-large w3-card products-images " alt="Maze Generator">
+                    <p class="w3-text"><a target="_blank" href='https://douglasdl.github.io/Maratona-Discover/Part%203/'>Check this sample...</a></p>
+                </div>
+
+                <div class="w3-col m3 w3-tooltip">
+                    <img src="images/part4.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity w3-border w3-round-large w3-card products-images "
+                        alt="Maze Generator 2">
+                    <p class="w3-text"><a target="_blank" href='https://douglasdl.github.io/Maratona-Discover/Part%204/'>Check this sample...</a></p>
+                </div>
+                -->
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
