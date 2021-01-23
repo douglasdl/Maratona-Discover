@@ -34,9 +34,21 @@ body, html {
   min-height: 100%;
 }
 
-/* P5 image (Documentation) */
-.bgimg-p5 {
-  background-image: url("https://douglasdl.github.io/P5/images/p5.png");
+/* HTML, CSS, JS image (Documentation) */
+.bgimg-html {
+  background-image: url("https://douglasdl.github.io/images/html.png");
+  min-height: 100px;
+  
+}
+
+.bgimg-css {
+  background-image: url("https://douglasdl.github.io/images/css.png");
+  min-height: 100px;
+  
+}
+
+.bgimg-js {
+  background-image: url("https://douglasdl.github.io/images/js.png");
   min-height: 100px;
   
 }
