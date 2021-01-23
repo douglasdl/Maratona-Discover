@@ -31,7 +31,7 @@ body, html {
 /* First image (Logo. Full height) */
 .bgimg-finance {
   background-image: url('https://douglasdl.github.io/images/finance.png');
-  min-height: 100%;
+  min-height: 100px;
   margin-bottom: 2rem;
 }
 
