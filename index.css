@@ -32,25 +32,26 @@ body, html {
 .bgimg-1 {
   background-image: url('https://douglasdl.github.io/P5/images/fundo2.png');
   min-height: 100%;
+  margin-bottom: 2rem;
 }
 
 /* HTML, CSS, JS image (Documentation) */
 .bgimg-html {
   background-image: url("https://douglasdl.github.io/images/html.png");
   min-height: 100px;
-  
+  margin-bottom: 2rem;
 }
 
 .bgimg-css {
   background-image: url("https://douglasdl.github.io/images/css.png");
   min-height: 100px;
-  
+  margin-bottom: 2rem;
 }
 
 .bgimg-js {
   background-image: url("https://douglasdl.github.io/images/js.png");
   min-height: 100px;
-  
+  margin-bottom: 2rem;
 }
 
 .logo {
