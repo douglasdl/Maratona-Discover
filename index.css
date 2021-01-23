@@ -21,7 +21,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-finance, .bgimg-html, .bgimg-css, .bgimg-js {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,6 +29,13 @@ body, html {
 }
 
 /* First image (Logo. Full height) */
+.bgimg-logo {
+  background-image: url('https://douglasdl.github.io/images/fundo2.png');
+  min-height: 100%;
+  margin-bottom: 2rem;
+}
+
+
 .bgimg-finance {
   background-image: url('https://douglasdl.github.io/images/finance.png');
   min-height: 100px;
