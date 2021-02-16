@@ -1,0 +1,9 @@
+# Ignore Folders
+Opções
+
+# Ignore Logs
+*.log
+
+# Ignore Users Set Files
+*.set
+
