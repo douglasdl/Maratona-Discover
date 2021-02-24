@@ -7,6 +7,7 @@ const Modal = {
     }
 }
 
+
 const Storage = {
     get() {
         return JSON.parse(localStorage.getItem("transactions")) || [];
@@ -52,13 +53,14 @@ const Transaction = {
             
             const splittedDate = transaction.date.split("/");
             
-            console.log(transaction.repeat)
+            //alert(transaction.times);
             switch(transaction.repeat) {
                 case "yearly":
                     var d = new Date(splittedDate[0], splittedDate[1], splittedDate[2] + i);
                     break;
                 case "monthly":
                     var d = new Date(splittedDate[0], splittedDate[1] + i, splittedDate[2]);
+                    alert(splittedDate[0] + "-" + splittedDate[1] + "-" + splittedDate[2]);
                     break;
                 case "weekly":
                     var d = new Date(splittedDate[0] + i * 7, splittedDate[1], splittedDate[2]);
@@ -144,13 +146,19 @@ const DOM = {
     },
 
     updateBalance() {
-        document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.incomes());
+        
+        document.getElementById('incomeDisplay').innerHTML  = Utils.formatCurrency(Transaction.incomes());
         document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses());
         document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
-        var header = document.getElementsByTagName('header');
-        header.innerHTML.classList.add('negative');
-
         
+        // Toogle Colors (For Positive and Negative Total)
+        if(Transaction.total() < 0) {
+            document.getElementById('header').classList.add('negative');
+            document.getElementById('total').classList.add('negative');
+        } else {
+            document.getElementById('header').classList.remove('negative');
+            document.getElementById('total').classList.remove('negative');
+        }        
     },
 
     clearTransactions() {
@@ -230,9 +238,11 @@ const Form = {
     clearFields() {
         Form.description.value = "";
         Form.amount.value = "";
-        Form.date.value = "";
-        Form.repeat.value = "";
-        Form.times.value = "";
+        //var d = new Date();
+        //alert(d);
+        Form.date.value = "2021-01-01";
+        Form.repeat.value = "monthly";
+        Form.times.value = "1";
     },
 
     submit(event) {
